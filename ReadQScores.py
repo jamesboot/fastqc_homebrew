@@ -1,12 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 27 14:00:23 2023
-
-@author: jamesboot
-"""
-
-# Here I write my own function for reading a fastq file and extracting the Q scores from it
+# Function for:
+# 1.Reading a fastq file
+# 2.Extract the Q scores 
+# 3.Calculate average Q score of each read
 
 def fastQC(infile):
 
@@ -43,15 +38,3 @@ def fastQC(infile):
     
     # Return vector of Q scores for every read
     return readQvals
-
-
-test1 = "/Users/jamesboot/Documents/9.Genome Centre Files/1M-GC-CF-9830-11TMGA-T_S20_L001_R1_001.fastq"
-test2 = "/Users/jamesboot/Documents/9.Genome Centre Files/GC-SST-10001-C2-w3-1-7-22_S23_L001_R1_001.fastq"
-
-result1 = fastQC(test1)
-result2 = fastQC(test2)
-
-import matplotlib.pyplot as plt
-
-plt.hist(result1)
-plt.hist(result2)
