@@ -10,7 +10,7 @@ print('File is: ', test1)
 
 # Run read q scores function
 print('Reading Q Scores from file...')
-result1 = rqs.fastQC(test1)
+result1 = rqs.CalcReadQScores(test1)
 
 # Plot result
 plt.hist(result1)
